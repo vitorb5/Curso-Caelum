@@ -4,9 +4,9 @@ public class Conta {
 
 	String nome;
 	int numeroConta;
-	int agencia;
+	String agencia;
 	double saldo;
-	String dataAbertura;
+	Data dataDeAbertura;
 
 	void saca(double valor) {
 		double saldoAtual = saldo - valor;
@@ -22,5 +22,22 @@ public class Conta {
 		double calculoRendimentoMensal = saldo * 0.99;
 		return calculoRendimentoMensal;
 	}
+
+	String recuperarDadosImpresso() {
+		String recuperarDadosImpresso = "Nome " + this.nome; 
+		recuperarDadosImpresso += " \nnumero da conta " + this.numeroConta;
+		recuperarDadosImpresso += " \nAgencia " + agencia;
+		recuperarDadosImpresso += " \nSaldo " + saldo;
+		return recuperarDadosImpresso;
+	}
+	
+	Data dataDeAbertura(){
+		int dataDeAbertura = this.dataDeAbertura.dia;
+		dataDeAbertura += this.dataDeAbertura.mes;
+		dataDeAbertura += this.dataDeAbertura.ano;
+		return null ;
+		
+	}
+	
 
 }
