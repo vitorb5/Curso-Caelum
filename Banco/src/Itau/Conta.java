@@ -24,20 +24,21 @@ public class Conta {
 	}
 
 	String recuperarDadosImpresso() {
-		String recuperarDadosImpresso = "Nome " + this.nome; 
+		String recuperarDadosImpresso = "Nome " + this.nome;
 		recuperarDadosImpresso += " \nnumero da conta " + this.numeroConta;
 		recuperarDadosImpresso += " \nAgencia " + agencia;
 		recuperarDadosImpresso += " \nSaldo " + saldo;
+		recuperarDadosImpresso += " \nData de abertura da conta " + this.dataDeAbertura.dia + " Dia " 
+		  + " mes " + this.dataDeAbertura.mes +  " ano " + this.dataDeAbertura.ano;
 		return recuperarDadosImpresso;
 	}
-	
-	Data dataDeAbertura(){
-		int dataDeAbertura = this.dataDeAbertura.dia;
-		dataDeAbertura += this.dataDeAbertura.mes;
-		dataDeAbertura += this.dataDeAbertura.ano;
-		return null ;
+
+	void dataDeAbertura(int dia, int mes, int ano) {
+		this.dataDeAbertura = new Data();
+		this.dataDeAbertura.dia = dia;
+		this.dataDeAbertura.mes = mes;
+		this.dataDeAbertura.ano = ano;
 		
 	}
-	
 
 }

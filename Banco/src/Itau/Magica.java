@@ -6,13 +6,22 @@ public class Magica {
 	public static void main(String[] args) {
 		Conta c1 = new Conta();
 		Conta c2 = new Conta();
-		Data data = new Data();
+	
 
 		c1.nome = "Vitor";
 		c1.numeroConta = 123456789;
 		c1.agencia = "12345-0";
-		c1.saldo = 2500.12;
-		c1.dataDeAbertura = data; 
+		c1.saldo = 2500.12; 
+		c1.dataDeAbertura(01, 01, 1111);
+		
+		double 	novoSaldo =100;
+		 if (novoSaldo < 0) { // 
+	            System.out.println("Não posso mudar para esse saldo");
+	        } else {
+	            c1.saldo = novoSaldo;
+	        }
+	    
+		
 		/*
 		 * c1.deposita(100); c1.saca(1000.100); c1.deposita(5000);
 		 * //System.out.println("A conto do " + c1.nome + " agência " +
